@@ -15,11 +15,8 @@ class Signup extends CI_Controller {
 				if(!strcmp($pw,$pw2)){
 					$this->user_model->addUser($name,$pw,$email,$phone);
 					$data["uname"]=$name;
-					$data["email"]=$email;
-					$verifyCode=$this->generateVerificationCode();
-					$this->send_email($email,$verifyCode);
-					$this->user_model->verifyCode($name,$email,$verifyCode);
-					$this->load->view('view_signup_success',$data);
+					$this->sessionSetting($name);
+					$this->load->view('view_login_success',$data);
 				}else{
 					$data['message']="password mismatch";
 					$this->load->view('view_login_fail',$data);
@@ -35,6 +32,23 @@ class Signup extends CI_Controller {
 		}
 
 
+	}
+
+
+	public function sessionSetting($name){
+		if(!$this->session->userdata('logged_in')){
+			$this->session->set_userdata('logged_in', 1);
+			$this->session->set_userdata('username',$name);
+			$res=$this->user_model->searchIDByName($name);
+			$ID=$res[0]->ID;
+			$password=$res[0]->Password;
+			$email=$res[0]->email;
+			$phone=$res[0]->phone;
+			$this->session->set_userdata('id',$ID);
+			$this->session->set_userdata('password',$password);
+			$this->session->set_userdata('email',$email);
+			$this->session->set_userdata('phone',$phone);
+		}
 	}
 
 	public function generateVerificationCode(){

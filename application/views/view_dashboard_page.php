@@ -110,60 +110,58 @@
 					<a href="#" class="list-group-item list-group-item-action">Appearance</a>
 					<a href="#" class="list-group-item list-group-item-action">Bug Report</a>
 					<a href="#" class="list-group-item list-group-item-action">Settings</a>
-
-
 				</div>
 			</div>
 			<div class="col-md-9" style="border: 0.5px solid black; border-radius: 4px;">
 				<div class="card" style="margin: 10px;">
 					<div class="card-body">
 						<div class="update" style="display: none;">
-						<div class="row">
-							<div class="col-md-12">
-								<h4>Your Profile</h4>
-								<hr>
+							<div class="row">
+								<div class="col-md-12">
+									<h4>Your Profile</h4>
+									<hr>
+								</div>
 							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<form action="<?php echo base_url()."project/index.php/dashboard/update"?>" method="post">
-									<div class="row">
-										<label for="username" class="col-4 col-form-label">User Name</label>
-										<div class="col-8">
-											<input id="username" name="username" placeholder="Username" class="here" required="required" type="text">
+							<div class="row">
+								<div class="col-md-12">
+									<form action="<?php echo base_url()."project/index.php/dashboard/update"?>" method="post">
+										<div class="row">
+											<label for="username" class="col-4 col-form-label">User Name</label>
+											<div class="col-8">
+												<input id="username" name="username" placeholder="Username" class="here" required="required" type="text">
+											</div>
 										</div>
-									</div>
 
 
-									<div class="row">
-										<label for="email" class="col-4 col-form-label">Email</label>
-										<div class="col-8">
-											<input id="email" name="email" placeholder="Email" class="here" type="text">
+										<div class="row">
+											<label for="email" class="col-4 col-form-label">Email</label>
+											<div class="col-8">
+												<input id="email" name="email" placeholder="Email" class="here" type="text">
+											</div>
 										</div>
-									</div>
 
-									<div class="row">
-										<label for="email" class="col-4 col-form-label">Phone</label>
-										<div class="col-8">
-											<input id="phone" name="phone" placeholder="New Phone" class="here" type="text">
+										<div class="row">
+											<label for="email" class="col-4 col-form-label">Phone</label>
+											<div class="col-8">
+												<input id="phone" name="phone" placeholder="New Phone" class="here" type="text">
+											</div>
 										</div>
-									</div>
 
-									<div class="row">
-										<label for="newpass" class="col-4 col-form-label">New Password</label>
-										<div class="col-8">
-											<input id="newpass" name="newpass" placeholder="New Password" class="here" type="text">
+										<div class="row">
+											<label for="newpass" class="col-4 col-form-label">New Password</label>
+											<div class="col-8">
+												<input id="newpass" name="newpass" placeholder="New Password" class="here" type="text">
+											</div>
 										</div>
-									</div>
 
-									<div class="row" style="margin-top: 20px;">
-										<div class="offset-4 col-8">
-											<button name="submit" type="submit" class="btn btn-primary">Update My Profile</button>
+										<div class="row" style="margin-top: 20px;">
+											<div class="offset-4 col-8">
+												<button name="submit" type="submit" class="btn btn-primary">Update My Profile</button>
+											</div>
 										</div>
-									</div>
-								</form>
+									</form>
+								</div>
 							</div>
-						</div>
 						</div>
 
 
@@ -289,7 +287,7 @@
 								}
 							?>
 						</div>
-					</div>
+					<!-- </div> -->
 
 						<div class="upload" style="display: none;">
 							<div class="row">
@@ -322,10 +320,6 @@
 												<source src="../uploads/1.mp4" type="video/mp4">
 											</video>
 										</div>
-
-
-
-
 									</div>
 
 									<br>
@@ -382,23 +376,7 @@
 							?>
 
 						</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-					</div>
+					<!-- </div> -->
 				</div>
 			</div>
 		</div>
